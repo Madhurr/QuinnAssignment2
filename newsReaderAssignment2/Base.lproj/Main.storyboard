@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="newsReaderAssignment2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jF8-sZ-sgM">
@@ -23,7 +23,7 @@
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPA-Md-sPo">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="56"/>
                                 <color key="backgroundColor" red="0.077658068080706522" green="0.78039215689999997" blue="0.14196407584444554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
@@ -34,7 +34,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rcO-ZS-Cng">
-                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                                <rect key="frame" x="0.0" y="78" width="320" height="470"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="178" id="2Uc-eC-fgk" customClass="ArticleCell" customModule="newsReaderAssignment2" customModuleProvider="target">
@@ -44,7 +44,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I8z-eB-6MX">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I8z-eB-6MX">
                                                     <rect key="frame" x="15" y="24" width="130" height="130"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="130" id="XNp-bp-VtK"/>
@@ -113,6 +113,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PYi-fn-0Sj"/>
                     <connections>
                         <outlet property="tableView" destination="rcO-ZS-Cng" id="Fcx-FP-DEc"/>
                     </connections>
@@ -120,6 +121,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.25" y="132.04225352112675"/>
+        </scene>
+        <!--Webview View Controller-->
+        <scene sceneID="Z6W-zx-bkz">
+            <objects>
+                <viewController storyboardIdentifier="web" id="hT0-dN-zD2" customClass="WebviewViewController" customModule="newsReaderAssignment2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tpo-bU-Skh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Att-Gv-Ykt">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="News Reader" id="cQU-Rk-QJ6">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="0qH-79-jDc">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="eAe-zC-OEe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xe8-2j-GXL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="22"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="XQi-K3-emt"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWD-lC-Mss">
+                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RWD-lC-Mss" firstAttribute="top" secondItem="Att-Gv-Ykt" secondAttribute="bottom" id="8gI-8O-Sqn"/>
+                            <constraint firstItem="RWD-lC-Mss" firstAttribute="trailing" secondItem="VDB-4P-pQ3" secondAttribute="trailing" id="Nan-mp-5iu"/>
+                            <constraint firstItem="Att-Gv-Ykt" firstAttribute="trailing" secondItem="VDB-4P-pQ3" secondAttribute="trailing" id="TqS-Bq-abu"/>
+                            <constraint firstItem="Xe8-2j-GXL" firstAttribute="leading" secondItem="VDB-4P-pQ3" secondAttribute="leading" id="U3A-Gp-R21"/>
+                            <constraint firstItem="Xe8-2j-GXL" firstAttribute="trailing" secondItem="VDB-4P-pQ3" secondAttribute="trailing" id="Uxq-OJ-JYo"/>
+                            <constraint firstItem="RWD-lC-Mss" firstAttribute="top" secondItem="Att-Gv-Ykt" secondAttribute="bottom" id="VgB-PZ-Xpv"/>
+                            <constraint firstItem="RWD-lC-Mss" firstAttribute="bottom" secondItem="VDB-4P-pQ3" secondAttribute="bottom" id="gTK-PJ-wjD"/>
+                            <constraint firstItem="Xe8-2j-GXL" firstAttribute="top" secondItem="VDB-4P-pQ3" secondAttribute="top" id="lQM-9P-0wf"/>
+                            <constraint firstItem="Att-Gv-Ykt" firstAttribute="top" secondItem="Xe8-2j-GXL" secondAttribute="bottom" id="lTq-dW-Ory"/>
+                            <constraint firstItem="Att-Gv-Ykt" firstAttribute="leading" secondItem="VDB-4P-pQ3" secondAttribute="leading" id="rUh-qo-XgL"/>
+                            <constraint firstItem="RWD-lC-Mss" firstAttribute="leading" secondItem="VDB-4P-pQ3" secondAttribute="leading" id="ySl-yF-sAR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VDB-4P-pQ3"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="RWD-lC-Mss" id="Q7b-Xn-d3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIP-B3-dRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001.25" y="130.98591549295776"/>
         </scene>
     </scenes>
 </document>

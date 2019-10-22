@@ -76,6 +76,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         cell.title.text = self.articles?[indexPath.item].headLine
         cell.desc.text = self.articles?[indexPath.item].desc
         cell.author.text = self.articles?[indexPath.item].author
+        cell.imgView.downloadImage(from: (self.articles?[indexPath.item].imageUrl ?? "nil"))
         
         return cell
        }
@@ -87,6 +88,27 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.articles?.count ?? 0
           }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let webVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "web") as! WebviewViewController
+        webVC.url = self.articles?[indexPath.item].url
+        self.present(webVC, animated: true, completion: nil)
+    }
 
 }
-
+extension UIImageView {
+    func downloadImage(from url: String){
+        let urlRequest = URLRequest(url: URL(string: url)!)
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) {(data,response,error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            DispatchQueue.main.async {
+                self.image = UIImage(data: data!)
+            }
+    }
+        task.resume()
+}
+}
