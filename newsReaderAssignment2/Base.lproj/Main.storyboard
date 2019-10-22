@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="66" width="320" height="502"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="205" id="2Uc-eC-fgk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="205" id="2Uc-eC-fgk" customClass="ArticleCell" customModule="newsReaderAssignment2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="205"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Uc-eC-fgk" id="qGV-oO-OW6">
@@ -83,6 +83,12 @@
                                                 <constraint firstItem="jhT-Ny-XbC" firstAttribute="top" secondItem="I8z-eB-6MX" secondAttribute="top" id="stb-fD-fop"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="author" destination="IIn-BO-z1c" id="1kX-a7-YFs"/>
+                                            <outlet property="desc" destination="RON-iQ-Usd" id="hRd-Wy-PSh"/>
+                                            <outlet property="imgView" destination="I8z-eB-6MX" id="lj2-o6-rF8"/>
+                                            <outlet property="title" destination="jhT-Ny-XbC" id="Lu0-VI-JSJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -102,6 +108,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="rcO-ZS-Cng" id="Fcx-FP-DEc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

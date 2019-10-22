@@ -16,6 +16,7 @@
 		E0E4B0D3235F59B400553B57 /* newsReaderAssignment2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4B0D2235F59B400553B57 /* newsReaderAssignment2Tests.swift */; };
 		E0E4B0DE235F59B400553B57 /* newsReaderAssignment2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4B0DD235F59B400553B57 /* newsReaderAssignment2UITests.swift */; };
 		E0E4B0EC235F5FB800553B57 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4B0EB235F5FB800553B57 /* ArticleCell.swift */; };
+		E0E4B0EE235F653200553B57 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4B0ED235F653200553B57 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E0E4B0DD235F59B400553B57 /* newsReaderAssignment2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsReaderAssignment2UITests.swift; sourceTree = "<group>"; };
 		E0E4B0DF235F59B400553B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0E4B0EB235F5FB800553B57 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		E0E4B0ED235F653200553B57 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				E0E4B0C6235F59B400553B57 /* LaunchScreen.storyboard */,
 				E0E4B0C9235F59B400553B57 /* Info.plist */,
 				E0E4B0EB235F5FB800553B57 /* ArticleCell.swift */,
+				E0E4B0ED235F653200553B57 /* Article.swift */,
 			);
 			path = newsReaderAssignment2;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				E0E4B0C0235F59AE00553B57 /* ViewController.swift in Sources */,
 				E0E4B0BC235F59AE00553B57 /* AppDelegate.swift in Sources */,
 				E0E4B0BE235F59AE00553B57 /* SceneDelegate.swift in Sources */,
+				E0E4B0EE235F653200553B57 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
