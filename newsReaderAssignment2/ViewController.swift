@@ -19,7 +19,8 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "articleCell" , for: indexPath)
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "articleCell" , for: indexPath) as! ArticleCell
+        cell.title.text = "This is the Test"
         return cell
        }
     
@@ -28,7 +29,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-              return 0
+              return 1
           }
 
 }
